@@ -1,0 +1,29 @@
+@()
+
+<div class="register" align="center" style="text-align: center">
+	<a href="@routes.AppController.loginBefore()"><img class="login-logo login-6" src="@routes.Assets.at("images/logo.jpg")"
+	style="background: #00A1E9">
+	</a>
+</div>
+
+<div align="center" style="border: 0;
+	overflow: hidden">
+	<h2 style="text-align: center;
+		margin-top: 35%;
+		margin-left: 2%;
+		font-size: 30px">Live系列软件</h2>
+	<h2 style="text-align: center;
+		margin-top: 0%;
+		margin-left: 2%;
+		font-size: 30px">序列生成器</h2>
+</div>
+
+	@scalajs.html.scripts("client", routes.Assets.at(_).toString, name => getClass.getResource(s"/public/$name") != null)
+
+	<script>
+		$(function () {
+		    App.init
+
+		})
+
+	</script>
